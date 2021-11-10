@@ -5,3 +5,4 @@ target
 .settings/org.eclipse.jdt.core.prefs
 springBootCamp.iml
 out
+/src/main/java/props/jdbc.properties
