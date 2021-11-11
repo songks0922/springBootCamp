@@ -13,7 +13,7 @@ public class MemberDAO {
     }
 
     public int getRowCount() {
-        String sqlStatement = "select count(*) from offers";
+        String sqlStatement = "select count(*) from sample";
         return jdbcTemplateObject.queryForObject(sqlStatement, Integer.class);
     }
 }

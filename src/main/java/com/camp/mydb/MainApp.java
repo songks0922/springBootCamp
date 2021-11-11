@@ -7,7 +7,7 @@ public class MainApp {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        MemberDAO memberDAO = (MemberDAO)context.getBean("MemberDAO");
+        MemberDAO memberDAO = (MemberDAO)context.getBean("memberDAO");
         System.out.println("The record count is " + memberDAO.getRowCount());
         context.close();
     }
