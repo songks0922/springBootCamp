@@ -6,3 +6,4 @@ target
 springBootCamp.iml
 out
 /src/main/resources/jdbc.properties
+/webapp/WEB-INF/database.properties

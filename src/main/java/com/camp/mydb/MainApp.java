@@ -1,15 +1,19 @@
 package com.camp.mydb;
 
+import com.camp.service.MemberService;
+import com.camp.service.MemberServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
+
+    @Autowired
+    private static MemberService memberService;
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        MemberDto dto = memberService.selectMember("id1");
 
-        MemberDAO memberDAO = (MemberDAO)context.getBean("memberDAO");
-        System.out.println("The record count is " + memberDAO.getRowCount());
-        context.close();
+        System.out.println(dto.getName());
     }
 
 }

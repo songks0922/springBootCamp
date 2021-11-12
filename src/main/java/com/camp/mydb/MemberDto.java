@@ -1,21 +1,15 @@
 package com.camp.mydb;
 
-public class Member {
+public class MemberDto {
 
     private int id;
+    private String password;
     private String name;
 
-    public Member(int id, String name) {
+    public MemberDto(int id, String password, String name) {
         this.id = id;
+        this.password = password;
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
     }
 
     public int getId() {
@@ -24,6 +18,14 @@ public class Member {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {

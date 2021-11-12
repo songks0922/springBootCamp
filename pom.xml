@@ -57,15 +57,23 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.2.7</version>
+            <version>3.4.5</version>
         </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.2</version>
+
+            <version>1.3.1</version>
         </dependency>
 
+        <!-- Spring-test -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
 
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -83,9 +91,10 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.7</version>
+            <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
