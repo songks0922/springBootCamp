@@ -3,6 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.camp.mapper.MemberMapper">
     <select id="selectMember" parameterType="String" resultType="memberDto">
-        SELECT name, id from test WHERE id =#{id}
+        SELECT name, id from TEST WHERE id =#{id}
     </select>
 </mapper>

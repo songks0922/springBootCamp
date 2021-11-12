@@ -4,6 +4,6 @@
 
 <configuration>
     <typeAliases>
-        <typeAlias alias="memberDto" type="com.camp.mydb.MemberDto"/>
+        <typeAlias alias="memberDto" type="com.camp.dto.MemberDto"/>
     </typeAliases>
 </configuration>

@@ -1,8 +1,8 @@
 package com.camp.service;
 
-import com.camp.mydb.MemberDto;
+import com.camp.dto.MemberDto;
 
 public interface MemberService {
 
-    public MemberDto selectMember(String id);
+    MemberDto selectMember(String id);
 }

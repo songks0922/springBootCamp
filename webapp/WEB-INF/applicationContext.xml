@@ -8,14 +8,6 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="/WEB-INF/database.properties"/>
-    <!--<context:component-scan base-package="com.jun"/>-->
-
-    <!--   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-           <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-           <property name="url" value="${jdbc.url}"/>
-           <property name="username" value="${jdbc.username}"/>
-           <property name="password" value="${jdbc.password}"/>
-       </bean>-->
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
@@ -23,6 +15,7 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
+
     <!-- Mysql <-> Mybatis를 연결해주는 객체 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
@@ -31,6 +24,6 @@
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="sqlSessionFactory"></constructor-arg>
+        <constructor-arg ref="sqlSessionFactory" />
     </bean>
 </beans>

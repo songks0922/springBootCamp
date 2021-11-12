@@ -1,6 +1,6 @@
 package com.camp.mapper;
 
-import com.camp.mydb.MemberDto;
+import com.camp.dto.MemberDto;
 
 public interface MemberMapper {
 

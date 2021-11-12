@@ -1,6 +1,6 @@
 package com.camp.controller;
 
-import com.camp.mydb.MemberDto;
+import com.camp.dto.MemberDto;
 import com.camp.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +13,11 @@ public class HomeController {
 
     @Autowired
     private MemberService memberService;
+
+//    @RequestMapping("/")
+//    public String index() {
+//        return "index";
+//    }
 
     @RequestMapping("/home")
     public String home() {
