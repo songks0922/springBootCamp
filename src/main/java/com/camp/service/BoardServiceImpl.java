@@ -5,12 +5,13 @@ import com.camp.dto.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.inject.Inject;
 import java.util.List;
 
 @Service
 public class BoardServiceImpl implements BoardService{
 
-    @Autowired
+    @Inject
     private BoardDao dao;
 
     @Override

@@ -14,7 +14,7 @@ public class BoardDaoImpl  implements BoardDao {
 
     @Inject
     private SqlSession session;
-    private static String namespace = "com.camp.BoardDao";
+    private static String namespace = "com.camp.mapper.BoardMapper";
 
     @Override
     public void create(BoardVo vo) throws Exception {
