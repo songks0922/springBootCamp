@@ -14,12 +14,7 @@ public class HomeController {
     @Autowired
     private MemberService memberService;
 
-//    @RequestMapping("/")
-//    public String index() {
-//        return "index";
-//    }
-
-    @RequestMapping("/home")
+    @RequestMapping("/")
     public String home() {
         return "home";
     }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemberDao {
 
-
+    // xml로  바로 처리 가능
     @Autowired
     private SqlSession sqlSession;
 
