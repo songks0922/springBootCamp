@@ -1,9 +1,8 @@
-package com.camp.persistence;
+package com.camp.persistance;
 
 import com.camp.dao.BoardDao;
 import com.camp.dto.BoardVo;
 import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
