@@ -45,7 +45,7 @@
                 <td><a href='/read?bno=${boardVo.bno}'>${boardVo.title}</a></td>
                 <td>${boardVo.writer}</td>
                 <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-                                    value="${boardVo.date}" /></td>
+                                    value="${boardVo.regdate}" /></td>
                 <td><span class="badge bg-red">${boardVo.viewcnt}</span></td>
             </tr>
         </c:forEach>
