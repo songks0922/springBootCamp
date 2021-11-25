@@ -2,17 +2,20 @@ package com.camp.persistance;
 
 import com.camp.dao.BoardDao;
 import com.camp.dto.BoardVo;
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class BoardDaoImpl  implements BoardDao {
 
-    @Inject
-    private SqlSession session;
+    private final SqlSessionTemplate session;
     private static String namespace = "com.camp.mapper.BoardMapper";
 
     @Override

@@ -2,6 +2,7 @@ package com.camp.controller;
 
 import com.camp.dto.BoardVo;
 import com.camp.service.BoardService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +15,12 @@ import javax.inject.Inject;
 
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping(value = "/")
 public class BoardController {
 
-    @Inject
-    private BoardService service;
+
+    private final BoardService service;
 
     @RequestMapping(value= "/listAll", method = RequestMethod.GET)
     public void listAll(Model model)throws Exception {
