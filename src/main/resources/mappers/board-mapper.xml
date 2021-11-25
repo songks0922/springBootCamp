@@ -8,13 +8,13 @@
     </insert>
 
     <select id="read" resultType="com.camp.dto.BoardVo">
-        select bno, title, content, regdate, viewcnt
+        select bno, title, content, create_date, viewcnt
         from board
         where bno=#{bno}
     </select>
 
     <update id="update">
-        update board set title=#{title}, content=#{content}
+        update board set title=#{title}, content=#{content}, writer=#{writer}
         where bno = #{bno}
     </update>
 
@@ -24,7 +24,7 @@
 
     <select id="listAll" resultType = "boardVo">
         <![CDATA[
-            select bno, title, content, writer, regdate, viewcnt
+            select bno, title, content, writer, create_date, viewcnt
             from board
             order by bno desc, create_date desc
         ]]>

@@ -33,6 +33,11 @@ public class BoardController {
         return "redirect:/listAll";
     }
 
+    @RequestMapping(value = "/regist", method = RequestMethod.GET)
+    public String registGET() throws Exception {
+        return "/regist";
+    }
+
     @RequestMapping(value = "/read", method = RequestMethod.GET)
     public void read(@RequestParam("bno")int bno, Model model) throws Exception{
         model.addAttribute(service.read(bno));
