@@ -1,15 +1,15 @@
 package com.camp.dao;
 
-import com.camp.dto.BoardVo;
+import com.camp.vo.BoardVo;
 
 import java.util.List;
 
 public interface BoardDao {
 
-    public void create(BoardVo vo) throws Exception;
-    public BoardVo read(Integer bno) throws Exception;
-    public void update(BoardVo vo) throws Exception;
-    public void delete(Integer bno) throws Exception;
-    public List<BoardVo> listAll() throws Exception;
-
+    void create(BoardVo vo) throws Exception;
+    BoardVo read(Integer bno) throws Exception;
+    void update(BoardVo vo) throws Exception;
+    void delete(Integer bno) throws Exception;
+    List<BoardVo> listAll() throws Exception;
+    int updateReviewCnt(Integer bno) throws Exception;
 }

@@ -1,21 +1,16 @@
 package com.camp.service;
 
 import com.camp.dao.BoardDao;
-import com.camp.dto.BoardVo;
+import com.camp.vo.BoardVo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 import java.util.List;
 
 @Component
 @RequiredArgsConstructor
 public class BoardServiceImpl implements BoardService{
 
-//    @Inject
-//    private BoardDao dao;
     private final BoardDao dao;
 
     @Override
@@ -41,5 +36,10 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public List<BoardVo> listAll() throws Exception {
         return dao.listAll();
+    }
+
+    @Override
+    public int updateReviewCnt(Integer bno) throws Exception {
+        return dao.updateReviewCnt(bno);
     }
 }

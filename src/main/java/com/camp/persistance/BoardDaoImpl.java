@@ -1,14 +1,11 @@
 package com.camp.persistance;
 
 import com.camp.dao.BoardDao;
-import com.camp.dto.BoardVo;
+import com.camp.vo.BoardVo;
 import lombok.RequiredArgsConstructor;
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.inject.Inject;
 import java.util.List;
 
 @Repository
@@ -42,5 +39,10 @@ public class BoardDaoImpl  implements BoardDao {
     @Override
     public List<BoardVo> listAll() throws Exception {
         return session.selectList(namespace + ".listAll");
+    }
+
+    @Override
+    public int updateReviewCnt(Integer bno) throws Exception {
+        return session.update(namespace + ".updateReviewCnt", bno);
     }
 }

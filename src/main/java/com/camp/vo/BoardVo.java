@@ -1,4 +1,4 @@
-package com.camp.dto;
+package com.camp.vo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,5 +14,4 @@ public class BoardVo {
     private String writer;
     private Date create_date;
     private int viewcnt;
-
 }

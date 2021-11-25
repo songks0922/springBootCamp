@@ -4,6 +4,6 @@
 
 <configuration>
     <typeAliases>
-        <typeAlias alias="boardVo" type="com.camp.dto.BoardVo" />
+        <typeAlias alias="boardVo" type="com.camp.vo.BoardVo" />
     </typeAliases>
 </configuration>
