@@ -3,11 +3,11 @@ package com.camp.service;
 import com.camp.dao.BoardDao;
 import com.camp.vo.BoardVo;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class BoardServiceImpl implements BoardService{
 

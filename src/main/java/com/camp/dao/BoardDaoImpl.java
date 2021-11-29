@@ -1,4 +1,4 @@
-package com.camp.persistance;
+package com.camp.dao;
 
 import com.camp.dao.BoardDao;
 import com.camp.vo.BoardVo;
